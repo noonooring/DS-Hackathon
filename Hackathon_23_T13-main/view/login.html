@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>API server LOGIN</title>
+        <style>
+            .input-group label { width:200px; display:inline-block; }
+        </style>
+    </head>
+    <body>
+        {% if user and user.id %}
+        <span> 안녕하세요! {{user.nick}}님 </span>
+        <a href="">
+            <button>로그아웃</button>
+        </a>
+        <fieldset>
+            <legend> 도메인 등록 </legend>
+            <form action="/domain" method="post">
+                <div>
+                    <label for="type-free">무료</label>
+                    <input type="radio">
+                </div>
+                <div>
+                    <label for="host">도메인</label>
+                    <input type="text">
+                </div>
+                <button>저장</button>
+            </form>
+        </fieldset>
+        <table>
+            
+        </table>
+    </body>
+</html>
